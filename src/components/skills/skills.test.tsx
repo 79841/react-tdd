@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-debugging-utils */
-import { render, screen } from "@testing-library/react";
+import { logRoles, render, screen } from "@testing-library/react";
 import { Skills } from "./skills";
 
 describe("Skills", () => {
@@ -34,8 +34,9 @@ describe("Skills", () => {
   });
 
   test("Start Learning button is eventually displayed", async () => {
-    render(<Skills skills={skills} />);
-    screen.debug();
+    const view = render(<Skills skills={skills} />);
+    // logRoles(view.container);
+    // screen.debug();
     const startLearningButton = await screen.findByRole(
       "button",
       {
@@ -45,7 +46,7 @@ describe("Skills", () => {
         timeout: 2000,
       }
     );
-    screen.debug();
+    // screen.debug();
     expect(startLearningButton).toBeInTheDocument();
   });
 });
