@@ -8,6 +8,8 @@ export const Application = () => {
       <img
         src="https://letmedev.vercel.app/static/images/card.png"
         alt="my website card"
+        height={100}
+        width={150}
       />
       <div data-testid="custom-element">Custom HTML element</div>
       <form>
