@@ -5,5 +5,5 @@ export const OptionSelector = () => {
       <option value="2">B</option>
       <option value="3">C</option>
     </select>
-  );
-};
+  )
+}

@@ -1,3 +1,3 @@
 export const Textarea = () => {
-  return <textarea defaultValue={"Hello"} />;
-};
+  return <textarea defaultValue={'Hello'} />
+}
